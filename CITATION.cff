@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "cite it if you want."
+title: "Cooperative Fairness License (CFL)"
+version: 1.0
+date-released: 2026-05-12
+type: "license"
+authors:
+  - name: "OwlCatDog"
+url: "https://github.com/OwlCatDog/Collaborative-Fairness-License"
+license: "CFL-1.0"
+repository: "https://github.com/OwlCatDog/Collaborative-Fairness-License"
+keywords:
+  - "open source license"
+  - "fairness license"
+  - "collaborative license"
+abstract: >-
+  The Cooperative Fairness License (CFL) 1.0 is a source-available license
+  that allows free use, modification, and distribution, with restrictions on
+  charging for unmodified copies, a prohibition of harmful functionalities
+  (backdoors, ransomware, data theft, resource abuse), and reciprocity
+  obligations for commercial users earning over $10,000 USD annually.
