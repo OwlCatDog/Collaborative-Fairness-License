@@ -1,76 +1,75 @@
-### 协作公平许可证 (CFL) 1.0
+### Cooperative Fairness License (CFL) 1.0
 
-版权所有 (C) [年份] [姓名]
+Copyright (C) [Year] [Name]
 
-#### 定义
--   **“作品”**：指本许可证所附的、受版权保护的源代码、目标代码、文档及相关文件。
--   **“你”**：指行使本许可证所授予许可的个体或法律实体。
+#### Definitions
+- **"Work"** means the copyrighted source code, object code, documentation, and related files accompanying this license.
+- **"You"** means the individual or legal entity exercising permissions granted by this license.
 
-#### 一、核心许可
-只要你遵守本许可证第 2 节和第 3 节中的条款，你被允许以任何目的使用、复制、修改、合并、发布、分发、再许可及/或销售本作品的副本。
+#### 1. Core License
+Provided you comply with Sections 2 and 3 of this license, you are permitted to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Work for any purpose.
 
-#### 二、未经修改的分发限制
+#### 2. Unmodified Distribution Restriction
 
-如果你在**未添加任何实质性新功能或内容**的情况下分发本作品的副本（源代码或可执行形式），你**不得**因此行为直接向接收方收取费用。
+If you distribute copies of the Work (in source or executable form) **without adding any substantial new features or content**, you **may not** charge recipients a fee directly for such distribution.
 
-**例外情况**：你可以收取合理的、仅用于覆盖物理介质成本（如空白光盘、USB 驱动器）或网络带宽成本的费用。
+**Exception:** You may charge a reasonable fee solely to cover the cost of physical media (e.g., blank CDs, USB drives) or network bandwidth.
 
-**违规判定**：
+**Determining Violations:**
 
-- **“未修改”——源代码：** 你分发的源代码的 SHA-256 哈希值，必须与原作者提供的官方源代码版本**完全一致**。
+- **"Unmodified" – Source Code:** The SHA-256 hash of the source code you distribute must be **identical** to the official source version provided by the original author.
 
-- **“未修改”——可执行文件/二进制：** 你分发的可执行文件必须满足以下条件之一：
-    - (a) **逐字节相同**（SHA-256 哈希值匹配）与原作者发布的官方二进制版本；或者
-    - (b) **直接从上述“未修改”的源代码构建**，使用标准的、公开文档化的构建流程，且未对编译选项、优化级别或嵌入式元数据进行任何会改变运行时行为的修改。
+- **"Unmodified" – Executables/Binaries:** The executable you distribute must satisfy one of the following:
+    - (a) **Byte-for-byte identical** (SHA-256 hash matches) to the official binary version released by the original author; or
+    - (b) **Built directly from the "unmodified" source code** above, using a standard, publicly documented build process, without any modifications to compiler flags, optimization levels, or embedded metadata that would change runtime behavior.
 
-- **微量变更（不视为“修改”）：** 以下变更**不**构成此条款意义上的“修改”：
-    - 换行符转换（LF 转 CRLF 或反之）
-    - 删除或添加不改变可执行行为的注释/空白字符
-    - 重新打包为不同的归档格式（.zip  vs .tar.gz  vs .7z）
-    - 由包管理器标准化过程产生的变更（如 `npm install` 产生的 lockfile 差异），前提是不改变任何源代码逻辑
+- **Trivial Changes (not considered "Modified"):** The following changes do **not** constitute "modification" for the purposes of this clause:
+    - Line-ending conversions (LF to CRLF or vice versa)
+    - Removal or addition of comments/whitespace that does not change executable behavior
+    - Repackaging into different archive formats (.zip vs .tar.gz vs .7z)
+    - Changes resulting from standard package manager processes (e.g., lockfile differences from `npm install`), provided no source logic is altered
 
-- **“实质性新功能”**：指影响范围超过本作品总代码行数 **6%** 的变更，以 `cloc` 或同类公认工具测量。仅限于构建脚本、配置文件或依赖版本更新的变更，除非其改变了运行时行为，否则不计入这 6%。
+- **"Substantial New Feature"** means a change that affects more than **6%** of the Work's total lines of code, as measured by `cloc` or a similar recognized tool. Changes limited to build scripts, configuration files, or dependency version updates, unless they alter runtime behavior, do not count toward this 6%.
 
+#### 3. Prohibition of Harmful Modifications
+You may not modify the Work or merge it with other code to introduce any objectively defined harmful functionality into the Work, including but not limited to the following examples:
 
-#### 三、禁止有害修改
-你不得对作品进行修改，或将其与其他代码合并，从而在作品中引入以下任一被客观定义的有害功能(包括但不限于以下示例)：
+1.  **Backdoors:** Functionality intentionally allowing unauthorized parties to bypass authentication or encryption protections.
+2.  **Ransom Logic:** Functionality designed to disable, lock, or damage a user's system or data unless a ransom is paid.
+3.  **Data Theft:** Functionality that transmits a user's personally identifiable information (PII) or sensitive data to a third party without the user's explicit, informed, separate consent (a click-through "I Accept").
+4.  **Resource Abuse:** Functionality that uses a user's computing resources for cryptocurrency mining, DDoS attacks, or similar high-intensity tasks without the user's explicit request.
 
-1.  **后门**：有意允许未授权方绕过身份验证或加密保护的功能。
-2.  **勒索逻辑**：旨在禁用、锁定或破坏用户系统或数据，除非用户支付赎金的功能。
-3.  **数据窃取**：在未经用户明确、知情的单独同意（点击“我接受”）之前，将用户的个人身份信息（PII）或敏感数据传输给第三方的功能。
-4.  **资源滥用**：未经用户明确请求，利用用户的计算资源进行加密货币挖矿、DDoS 攻击或类似高强度任务的功能。
+**Consequence of Violation:** Introducing any of the above functionality automatically and immediately terminates all rights granted to you under this license. You lose all rights to distribute or use the Work.
 
-**违规后果**：引入上述任何功能，即自动且立即终止本许可证授予你的一切权利。你无权再以任何形式分发或使用本作品。
+#### 4. Contributor Reciprocity Terms
 
-#### 四、贡献者回馈条款
+**4.1 Source Code Publicity Exemption**
 
-**4.1 源代码公开豁免**
+If you **publicly release** the **entire source code** of your modified version or related services (including all frontend, backend, database scripts, configuration files, but excluding purely local environment configuration files such as .env.local or files containing sensitive credentials) under an **OSI-approved open source license** (such as GPL, MIT, Apache 2.0) or this license (CFL), and make it freely accessible for anyone to view, use, modify, and distribute, then **all obligations under this Section 4 are automatically waived**.
 
-如果你将修改版本或相关服务的**全部源代码**（包括所有前端、后端、数据库脚本、配置文件 ,但不包括纯本地环境配置文件（如 .env.local）或包含敏感凭证的文件）以 **OSI 批准的开源许可证**（如 GPL、MIT、Apache 2.0）或本许可证（CFL）**公开发布**，且任何人都可以自由访问、查看、使用、修改你的源代码，则本第 4 节的所有义务**自动豁免**。
+If you stop publicly releasing the source code (e.g., by making the repository private), the waiver terminates immediately, and you will have **30 days** to either re-publicize the code or comply with the terms below.
 
-如果你停止公开源代码（如将仓库转为私有），豁免立即终止，你将有 **30 天** 时间重新公开或遵守以下条款。
+**4.2 For-Profit Obligations**
 
-**4.2 营利义务条款**
+If you **do not meet the exemption conditions in 4.1**, and by modifying the Work or developing services related to the Work (SaaS, hosted services, etc.), you obtain **net income exceeding $10,000 USD** (or equivalent in other currencies) over any consecutive 12 calendar months, you must **choose one** of the following two actions:
 
-如果你**不满足 4.1 的豁免条件**，且通过修改本作品，或开发与本作品相关的服务（SaaS、托管服务等），在连续 12 个日历月内获得超过 **1 万美元**（或等值其他货币）的净收入，你应从以下两种操作中**任选其一**执行：
+- **Option 1 – Provide Attribution:** Acknowledge the original author of the Work in a prominent location of your service (e.g., an "About" page).
 
-- **选项一——提供署名**：在你服务的显著位置（如“关于”页面）承认本作品的原作者。
+- **Option 2 – Perform a single "Act of Love"**, such as any one of the following:
+    (a) Submit at least one accepted bug fix or feature patch to the original author's project;
+    (b) Write a technical blog post or documentation tutorial of at least 500 words for the original author's project;
+    (c) Donate $100 USD to any organization that:
+        - Is a recognized open source foundation (e.g., Apache Foundation, Linux Foundation, Software Freedom Conservancy, Open Source Initiative); or
+        - Holds valid charitable/public benefit organization status at the time of donation (e.g., 501(c)(3) in the US, legal charity registration in China); or
+        - Is a clear public domain project (e.g., Wikipedia, Internet Archive)
 
-- **选项二——进行一次“爱的行动”**，例如以下任意一项：
-    (a) 向原作者的项目提交至少一个被接受的 Bug 修复或功能补丁；
-    (b) 为原作者的项目撰写一篇至少 500 字的技术博客或文档教程；
-    (c) 向任何符合以下条件的组织捐赠 100 美元：
-        - 属于公认的开源基金会（如 Apache 基金会、Linux 基金会、软件自由保护协会、开源倡议组织）；或者
-        - 在捐赠行为发生时拥有有效的慈善/公益组织资质（如美国的 501(c)(3)、中国的慈善组织法人登记）；或者
-        - 是一个明确的公共领域项目（如维基百科、Internet Archive）
+(Providing a donation receipt constitutes fulfillment of this obligation.)
 
-（提供捐赠收据即视为完成本条义务）
+#### 5. Disclaimer of Warranty and Limitation of Liability
+THE WORK IS PROVIDED "AS IS", WITHOUT ANY WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT SHALL THE ORIGINAL AUTHOR OR COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY, WHETHER IN CONTRACT, TORT, OR OTHERWISE, ARISING FROM THE USE OF THE WORK.
 
-#### 五、免责声明与责任限制
-本作品按“现状”提供，不附带任何明示或暗示的担保，包括但不限于适销性、特定用途适用性的担保。在任何情况下，原作者或版权持有人均不对因使用本作品而产生的任何索赔、损害或其他责任负责，无论是基于合同、侵权还是其他原因。
+#### 6. Termination of Terms
+If you violate Sections 2, 3, or 4 of this license, your rights granted hereunder automatically terminate. However, if you remedy the violation within 30 days of receiving written notice, your rights may be reinstated.
 
-#### 六、条款终止
-如果你违反了本许可证的第 2、3 或 4 条，你获得的权利将自动终止。但是，如果你在收到书面通知后的 30 天内纠正了违规行为，则权利可以恢复。
-
-#### 七、法律效力说明
-如果本许可证的任何部分被有管辖权的法院认定为不可执行，其余部分仍然完全有效。该不可执行的条款应被视为修改到使其可执行且最接近原意图的最小必要程度；如果无法这样修改，则该条款应被删除。
+#### 7. Legal Effect Severability
+If any part of this license is held unenforceable by a court of competent jurisdiction, the remaining parts remain in full force and effect. The unenforceable provision shall be deemed modified to the minimum extent necessary to make it enforceable while most closely reflecting the original intent; if such modification is impossible, the provision shall be deleted.
